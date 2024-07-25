@@ -1,0 +1,39 @@
+apiVersion: backstage.io/v1beta2
+kind: Component
+metadata:
+  name: pythonapi
+  title: Python API
+  description: Create a Python API
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
+  owner: user:guest
+  lifecycle: experimental
+  template:
+    name: pythonapi
+    parameters:
+      - name: name
+        description: Unique name of the component
+        type: string
+        required: true
+        ui:autofocus: true
+        ui:options:
+          rows: 5
+      - name: repoUrl
+        description: Repository Location
+        type: string
+        required: true
+        ui:field: RepoUrlPicker
+        ui:options:
+          allowedHosts:
+            - dev.azure.com
+  tags:
+    - python
+    - api
+    - experimental
+  system: pythonapi
+  templateName: pythonapi
+  catalogInfo:
+    description: 'This is {{ parameters.name }}'
+    repoUrl: '{{ parameters.repoUrl }}'
