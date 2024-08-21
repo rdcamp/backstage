@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1beta2
+kind: Template
+metadata:
+  name: Jesse-RBAC-Testing
+  title: Jesse RBAC Testing
+  description: Template to under RBAC Capabilities
+  tags:
+    - hidden
+spec:
+  type: service
+  owner: group:Harness_Acct_Admins_LOCAL
+  lifecycle: experimental
+  parameters:
+    - title: Details
+      properties:
+        orgID:
+          title: Org Identifier
+          type: string
+          ui:field: HarnessOrgPicker
+        projectId:
+           title: Project Identifier
+           description: Harness Project Identifier
+           type: string
+           ui:field: HarnessProjectPicker
