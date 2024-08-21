@@ -4,8 +4,8 @@ metadata:
   name: Jesse-RBAC-Testing
   title: Jesse RBAC Testing
   description: Template to under RBAC Capabilities
-  tags:
-   - hidden
+  tags:
+    - hidden
 spec:
   type: service
   owner: group:Harness_Acct_Admins_LOCAL
